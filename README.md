@@ -20,7 +20,7 @@ Modify `theme` setting in `_config.yml` to `oasis`.
 ```diff
 _config.yml
 - theme: some-theme
-+ theme: landscape
++ theme: oasis
 ```
 
 Disable `highlight` and enable `prismjs` to highlight code in `_config.yml`
