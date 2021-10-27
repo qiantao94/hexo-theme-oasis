@@ -1,6 +1,8 @@
 # Oasis 🌏
 
-This is simple hexo blog theme, neither elegant ui nor beautiful animation.
+This is simple hexo blog theme, neither elegant ui nor beautiful animation. 
+
+[Preivew Oasis](https://hexo-theme-oasis-preview.pages.dev/)
 
 **Oasis requires Hexo 5.4.0 and above**
 
@@ -38,7 +40,6 @@ prismjs:
 cd themes/oasis
 git pull
 ```
-
 
 
 ## LICENSE
