@@ -1,0 +1,22 @@
+if hexo-fonfig('prismjs_settings.line_number')
+  @require 'line-number'
+
+@require 'diff'
+
+#post
+  pre[class*='language-']
+    &::-webkit-scrollbar-thumb
+      background: var(--hlscrollbar-bg)
+
+    &:not(.line-numbers)
+      padding: 10px 20px
+
+    .caption
+      // padding: 4px 16px !important
+      clearfix()
+      font-size: 0.85em
+      color: code-gray
+      line-height: 1em
+      margin-bottom: 1em
+      a
+        padding: 0.5em !important

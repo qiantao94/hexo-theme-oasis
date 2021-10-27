@@ -1,0 +1,8 @@
+p
+  - var title = post.title.length > 0 ? post.title : post.slug
+  if (post.link && post.link.length)
+    a(href=url_for(post.link), target='_blank')= title
+  else
+    a(href=url_for(post.path))= title
+if post.date
+  time(datetime=post.date.toJSON())= date(post.date, date_format)

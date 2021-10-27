@@ -1,0 +1,6 @@
+
+if page.posts.length > 0
+  #recent-posts
+    each post in page.posts.sort('date', -1).limit(10).toArray()
+      .post-item
+        include post_item.pug

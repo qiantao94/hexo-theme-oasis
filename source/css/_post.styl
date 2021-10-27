@@ -1,0 +1,88 @@
+color-border = #f3f3f3
+
+#post
+    color color-primary
+    p
+        text-align justify
+    a
+        color #113CFC
+
+    ol,ul
+        padding-inline-start 1.5em
+
+    img
+        display block
+        margin auto
+
+    table
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        corner-radius 2em
+        width 100%
+        // thead, tbody
+            // width 100%
+        thead tr
+            background-color: #CCCCCC;
+            color: #ffffff;
+            text-align: left;
+        tbody tr:nth-of-type(even)
+            background-color: color-border;
+        tbody tr:last-of-type
+            border-bottom: 1px solid #f3f3f3;
+        th, td
+            padding: 12px 15px;
+
+    blockquote
+        background: #f9f9f9;
+        border-left: 0.35em solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        p
+            display: inline;
+    blockquote.pullquote
+        background none
+        border-left none
+        text-align: left
+        width: 45%
+        margin 0
+        padding 0
+        font-size 1.1em
+        font-family font-serif
+        color color-accent
+        &.left
+            // margin-left: 0.5em
+            margin-right: 1em
+            float left
+        &.right
+            // margin-right: 0.5em
+            margin-left: 1em
+            float right
+    hr
+        background #CCCCCC
+        height 1px
+        border none
+
+    .video-container
+        position: relative
+        padding-top: (9 / 16 * 100)% // 16:9 ratio
+        height: 0
+        overflow: hidden
+        iframe, object, embed
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            margin-top: 0
+
+
+    div.post-tags
+        margin-top 5em
+        a
+            color color-accent
+
+    p
+        code
+            background color-border
+            padding 0.2em 0.2em

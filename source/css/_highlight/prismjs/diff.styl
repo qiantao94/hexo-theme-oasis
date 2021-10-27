@@ -1,0 +1,94 @@
+code-color-primary = #ff0078
+
+code-color-secondary = #52006A
+
+code-color-thirdly = #0076ff
+
+code-gray = rgba(149, 165, 166, .8)
+
+pre[class*='language-']
+    .token
+      color primary-color
+    .token.class-name
+      color code-color-thirdly
+    .token.function
+      color: code-color-secondary
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata
+      color: code-gray
+
+    .token.punctuation
+      color: code-primary-color
+
+    .token.namespace
+      opacity: .7
+
+    .token.operator,
+    .token.boolean,
+    .token.number
+      //
+
+    .token.property
+      color: code-color-secondary
+
+    .token.tag
+      color: code-color-secondary
+
+    .token.string
+      color: code-gray
+
+    .token.selector
+      color: code-color-secondary
+
+    .token.attr-name
+      color: code-color-primary
+
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string
+      color: code-gray
+
+    .token.attr-value
+      color code-gray
+    .token.keyword,
+    .token.control,
+    .token.directive,
+    .token.unit
+      color: code-color-primary
+
+    .token.statement,
+    .token.regex,
+    .token.atrule
+      color: code-color-secondary
+
+    .token.placeholder,
+    .token.variable
+      color: code-color-secondary
+
+    .token.deleted
+      text-decoration: line-through
+
+    .token.inserted
+      border-bottom: 1px dotted #202746
+      text-decoration: none
+
+    .token.italic
+      font-style: italic
+
+    .token.important,
+    .token.bold
+      font-weight: bold
+
+    .token.important
+      color: code-color-primary
+
+    .token.entity
+      cursor: help
+
+    pre > code.highlight
+      outline: .4em solid #c94922
+      outline-offset: .4em

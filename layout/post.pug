@@ -1,0 +1,14 @@
+extends _includes/layout.pug
+
+block content
+  article#post
+    if page.photos && page.photos.length
+      div(class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery")
+        for photo in page.photos
+          img(src=url_for(photo) itemprop="contentUrl")
+    != page.content
+    if page.tags && page.tags.length
+      - var transform = function(str) { return '#' + str; }
+      - var config = {class: 'post-tag', show_count: false, style: false, transform: transform, separator: ', ', transform: transform}
+      .post-tags!= list_tags(page.tags, config)
+  #paginator!= paginator()

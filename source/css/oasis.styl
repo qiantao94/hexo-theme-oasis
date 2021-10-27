@@ -1,0 +1,102 @@
+fonts = Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+
+color-accent = #394867
+color-primary = #1a202c
+
+body
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-items center /* For horizontal alignment */
+  padding-top 5em
+  padding-bottom 8em
+  font-family fonts
+  color: color-primary
+
+div#content
+  // display: flex;
+  // flex-direction: column
+  // justify-content: flex-start
+  // align-items: flex-start
+  width 40em
+  max-width 90%
+
+h1#title
+  margin-bottom 0
+
+div#menu-outer
+  margin-top 0.5em
+
+
+nav#menu-inner 
+  a,span
+    margin-right 1em
+    font-weight 520
+  span
+    color color-primary
+    text-decoration none
+  a
+    color color-accent
+    text-decoration underline
+
+div#content-outer
+  margin-top 2em
+  div#content-inner
+    div#paginator
+      margin-top 4em
+      a
+        color color-accent
+        margin-right 1em
+      span
+        color color-accent
+        margin-right 1em
+
+div.post-item
+  margin-bottom: 1em
+  p
+    margin-top 0
+    margin-bottom 0.5em
+    a
+      color #19202b
+      font-size: 1.2em
+      font-weight: 500
+      text-decoration: none
+      
+time
+  color #b9bfcc
+
+
+
+div#bottom-inner
+  margin-top 8em
+  hr
+    background #CCCCCC
+    height 1px
+    border none
+  div
+    display flex
+    height 2em
+    justify-content space-between
+    align-items center
+    a
+      color #19202b
+    #hexo
+      float right
+    img
+        width 1em
+        height 1em
+        margin-left 1em
+        margin-top 3px
+
+img
+  max-width 100%
+
+aside
+  a
+    color color-accent
+  li
+    margin-top 0.5em
+    margin-bottom 0.5em
+
+@import '_post'
+@import '_highlight/index'

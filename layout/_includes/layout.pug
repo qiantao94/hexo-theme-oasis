@@ -1,0 +1,61 @@
+
+- var pageTitle = page.title || config.subtitle || ''
+- if (is_archive()) pageTitle = 'Archives'
+- if (is_tag()) pageTitle = 'Tag: ' + page.tag
+- if (is_category()) pageTitle = 'Category: ' + page.category
+- if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
+- if (is_year()) pageTitle += ': ' + page.year
+- if (pageTitle.length <= 0 && is_home()) pageTitle = config.title
+- pageTitle = pageTitle.length > 0 ? pageTitle : page.slug
+- var title = pageTitle
+- if (pageTitle != config.title) pageTitle += ' │ ' + config.title
+
+
+doctype html
+html(lang=config.language)
+  head
+    meta(charset='UTF-8')
+    title= pageTitle
+    if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+      //- stylesheets list from _config.yml
+      each url in theme.stylesheets
+        link(rel='stylesheet', href=url)
+  body
+    #content
+      h1#title= title
+      #menu-outer
+        nav#menu-inner
+          - console.log(page.path)
+          if is_post() || is_category() || is_tag()
+            a#menu-back(href="javascript:history.back()") Back
+            if is_post()
+              time(datetime=page.date.toJSON())= date(page.date, date_format)
+          else
+            each url, label in theme.menu
+              if is_current(url)
+                span= label
+              else
+                a.menu-item(href=url)= label
+      #content-outer
+        #content-inner
+          if body
+            div!= body
+          else
+            block content
+      #bottom-outer
+        #bottom-inner
+          hr
+          div
+            div
+              a #{new Date().getFullYear()}@ #{config.author}
+              a(href="/atom.xml")
+                img(src="/assets/rss.png")
+            #hexo
+              a Powered by&nbsp
+              a(href="https://hexo.io") Hexo
+              a &nbsp&&nbsp
+              a(href="https://github.com/qiantao94/hexo-theme-oasis") Oasis
+  if theme.scripts !== undefined && theme.scripts.length > 0
+    //- scripts list from config.yml
+    each url in theme.scripts
+      script(src=url)

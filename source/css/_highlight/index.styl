@@ -1,0 +1,16 @@
+wordWrap = hexo-config('code_word_wrap')
+code-font-size = 0.90em
+code-font-family = JetBrains Mono, SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace
+
+highlight-border-color = #d0d7de
+
+@require 'prismjs/index'
+
+#post
+  pre
+    background #f7f7f7
+  pre, code
+    overflow: auto
+    font-size: code-font-size
+    font-family: code-font-family !important
+    border-radius 0.3em
