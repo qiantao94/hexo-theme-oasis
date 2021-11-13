@@ -14,13 +14,6 @@ npm install hexo-generator-feed --save
 npm install hexo-renderer-pug --save
 ```
 
-## Run
-``` sh
-hexo clean
-hexo g
-hexo s
-```
-
 ## Enable
 
 Modify `theme` setting in `_config.yml` to `oasis`.
@@ -38,6 +31,13 @@ highlight:
   enable: false
 prismjs:
   enable: true
+```
+
+## Run
+``` sh
+hexo clean
+hexo g
+hexo s
 ```
 
 ## Update
