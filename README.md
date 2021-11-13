@@ -10,7 +10,6 @@ This is simple hexo blog theme, neither elegant ui nor beautiful animation.
 
 ``` sh
 git clone --depth 1 https://github.com/qiantao94/hexo-theme-oasis.git themes/oasis
-cd themes/oasis
 npm install hexo-generator-feed --save
 npm install hexo-renderer-pug --save
 ```
