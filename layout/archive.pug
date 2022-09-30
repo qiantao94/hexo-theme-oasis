@@ -44,8 +44,9 @@ block content
       h1= page.month + '/' + page.year
 
       - page.posts.each(function(article){
-        .archive-list-item
-          a(href=url_for(article.path))= article.title
+        .post-item
+          p
+            a(href=url_for(article.path))= article.title
           time(datetime=date_xml(article.date))= date(article.date)
       - })
 
