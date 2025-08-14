@@ -1,88 +1,367 @@
-color-border = #f3f3f3
 
-#post
-    color color-primary
-    p
-        text-align justify
-    a
-        color #113CFC
+// 移动端适配
+@media (max-width: 768px) {
+    #post {
+        p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
 
-    ol,ul
-        padding-inline-start 1.5em
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.1em;
+            margin-top: 1.2em;
+            margin-bottom: 0.8em;
+        }
 
-    img
-        display block
-        margin auto
+        h1 {
+            font-size: 1.4em;
+        }
 
-    table
+        h2 {
+            font-size: 1.3em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        ol, ul {
+            padding-inline-start: 1em;
+            font-size: 0.95em;
+        }
+
+        li {
+            margin-bottom: 0.3em;
+        }
+
+        table {
+            font-size: 0.8em;
+            margin: 15px 0;
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+
+        blockquote {
+            margin: 1em 5px;
+            padding: 0.3em 8px;
+            font-size: 0.9em;
+        }
+
+        blockquote.pullquote {
+            width: 100%;
+            float: none;
+            margin: 1em 0;
+            font-size: 1em;
+        }
+
+        .video-container {
+            margin: 1em 0;
+        }
+
+        div.post-tags {
+            margin-top: 3em;
+            font-size: 0.9em;
+        }
+
+        p code {
+            padding: 0.15em 0.15em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+// 小屏幕手机适配
+@media (max-width: 480px) {
+    #post {
+        p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.3em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.1em;
+        }
+
+        ol, ul {
+            padding-inline-start: 0.8em;
+            font-size: 0.9em;
+        }
+
+        table {
+            font-size: 0.75em;
+
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+
+        blockquote {
+            margin: 0.8em 3px;
+            padding: 0.25em 6px;
+            font-size: 0.85em;
+        }
+
+        div.post-tags {
+            margin-top: 2em;
+            font-size: 0.85em;
+        }
+
+        p code {
+            padding: 0.1em 0.1em;
+            font-size: 0.85em;
+        }
+    }
+}
+
+color-border = #f3f3f3;
+
+#post {
+    color: color-primary;
+
+    p {
+        text-align: justify;
+    }
+
+    a {
+        color: #113CFC;
+    }
+
+    ol, ul {
+        padding-inline-start: 1.5em;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    table {
         border-collapse: collapse;
         margin: 25px 0;
         font-size: 0.9em;
-        corner-radius 2em
-        width 100%
-        // thead, tbody
-            // width 100%
-        thead tr
+        corner-radius: 2em;
+        width: 100%;
+
+        thead tr {
             background-color: #CCCCCC;
             color: #ffffff;
             text-align: left;
-        tbody tr:nth-of-type(even)
-            background-color: color-border;
-        tbody tr:last-of-type
-            border-bottom: 1px solid #f3f3f3;
-        th, td
-            padding: 12px 15px;
+        }
 
-    blockquote
+        tbody tr:nth-of-type(even) {
+            background-color: color-border;
+        }
+
+        tbody tr:last-of-type {
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        th, td {
+            padding: 12px 15px;
+        }
+    }
+
+    blockquote {
         background: #f9f9f9;
         border-left: 0.35em solid #ccc;
         margin: 1.5em 10px;
         padding: 0.5em 10px;
-        p
+
+        p {
             display: inline;
-    blockquote.pullquote
-        background none
-        border-left none
-        text-align: left
-        width: 45%
-        margin 0
-        padding 0
-        font-size 1.1em
-        font-family font-serif
-        color color-accent
-        &.left
+        }
+    }
+
+    blockquote.pullquote {
+        background: none;
+        border-left: none;
+        text-align: left;
+        width: 45%;
+        margin: 0;
+        padding: 0;
+        font-size: 1.1em;
+        font-family: font-serif;
+        color: color-accent;
+
+        &.left {
             // margin-left: 0.5em
-            margin-right: 1em
-            float left
-        &.right
+            margin-right: 1em;
+            float: left;
+        }
+
+        &.right {
             // margin-right: 0.5em
-            margin-left: 1em
-            float right
-    hr
-        background #CCCCCC
-        height 1px
-        border none
+            margin-left: 1em;
+            float: right;
+        }
+    }
 
-    .video-container
-        position: relative
-        padding-top: (9 / 16 * 100)% // 16:9 ratio
-        height: 0
-        overflow: hidden
-        iframe, object, embed
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            margin-top: 0
+    hr {
+        background: #CCCCCC;
+        height: 1px;
+        border: none;
+    }
 
+    .video-container {
+        position: relative;
+        padding-top: (9 / 16 * 100)%; // 16:9 ratio
+        height: 0;
+        overflow: hidden;
 
-    div.post-tags
-        margin-top 5em
-        a
-            color color-accent
+        iframe, object, embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+        }
+    }
 
-    p
-        code
-            background color-border
-            padding 0.2em 0.2em
+    div.post-tags {
+        margin-top: 5em;
+
+        a {
+            color: color-accent;
+        }
+    }
+
+    p {
+        code {
+            background: color-border;
+            padding: 0.2em 0.2em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #post {
+        p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.1em;
+            margin-top: 1.2em;
+            margin-bottom: 0.8em;
+        }
+
+        h1 {
+            font-size: 1.4em;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        ol, ul {
+            padding-inline-start: 1em;
+            font-size: 0.95em;
+        }
+
+        li {
+            margin-bottom: 0.3em;
+        }
+
+        table {
+            font-size: 0.8em;
+            margin: 15px 0;
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+
+        blockquote {
+            margin: 1em 5px;
+            padding: 0.3em 8px;
+            font-size: 0.9em;
+        }
+
+        blockquote.pullquote {
+            width: 100%;
+            float: none;
+            margin: 1em 0;
+            font-size: 1em;
+        }
+
+        .video-container {
+            margin: 1em 0;
+        }
+
+        div.post-tags {
+            margin-top: 3em;
+            font-size: 0.9em;
+        }
+
+        p code {
+            padding: 0.15em 0.15em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #post {
+        p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.3em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.1em;
+        }
+
+        ol, ul {
+            padding-inline-start: 0.8em;
+            font-size: 0.9em;
+        }
+
+        table {
+            font-size: 0.75em;
+
+            th, td {
+                padding: 6px 8px;
+            }
+        }
+
+        blockquote {
+            margin: 0.8em 3px;
+            padding: 0.25em 6px;
+            font-size: 0.85em;
+        }
+
+        div.post-tags {
+            margin-top: 2em;
+            font-size: 0.85em;
+        }
+
+        p code {
+            padding: 0.1em 0.1em;
+            font-size: 0.85em;
+        }
+    }
+}
